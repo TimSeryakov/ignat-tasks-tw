@@ -1,0 +1,66 @@
+.message-bubble {
+  width: 400px;
+  margin: 20px auto;
+  border-radius: 15px;
+  background: #2f2f2f;
+  color: lightgray;
+  padding: 20px;
+  text-align: left;
+  font-weight: 400;
+  position: relative;
+}
+
+
+.message-bubble--right:before {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-left: 15px solid #2f2f2f;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #2f2f2f;
+  border-bottom: 15px solid transparent;
+  right: -16px;
+  top: 0;
+}
+
+
+
+.message-bubble--left:before {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-left: 15px solid transparent;
+  border-right: 15px solid #2f2f2f;
+  border-top: 15px solid #2f2f2f;
+  border-bottom: 15px solid transparent;
+  left: -16px;
+  top: 0;
+}
+
+.message-bubble__inner {
+  display: flex;
+}
+
+.message-bubble__inner span {
+  font-weight: normal;
+}
+
+.message-bubble__inner h4 {
+  margin: 0;
+  color: gainsboro;
+}
+
+.message-bubble__inner img {
+  height: 50px;
+  background-color: lightgray;
+  width: 50px;
+  border: 1px solid white;
+  border-radius: 99999%;
+}
+
+.message-bubble__inner div {
+  /*border: 1px solid rebeccapurple;*/
+  padding-left: 20px;
+}
