@@ -10,6 +10,7 @@ export function Header () {
           <li className="inline-block mt-10 mx-3 p-3 rounded-md bg-green-200 text-green-700 hover:bg-red-200"><NavLink to="/chat"><b>Chat</b> (Task 01) </NavLink></li>
           <li className="inline-block mt-10 mx-3 p-3 rounded-md bg-green-200 text-green-700 hover:bg-red-200"><NavLink to="/todo"><b>Todo</b> (Task 02) </NavLink></li>
           <li className="inline-block mt-10 mx-3 p-3 rounded-md bg-green-200 text-green-700 hover:bg-red-200"><NavLink to="/hello"><b>Hello</b> (Task 03) </NavLink></li>
+          <li className="inline-block mt-10 mx-3 p-3 rounded-md bg-green-200 text-green-700 hover:bg-red-200"><NavLink to="/custom-elements-demo"><b>Custom Elements Demo</b> (Task 04) </NavLink></li>
         </ul>
       </header>
 
