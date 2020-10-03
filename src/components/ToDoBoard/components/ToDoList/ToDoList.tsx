@@ -1,5 +1,5 @@
 import React from "react";
-import {FilterPriorityValuesType, TaskType} from "../ToDoBoard/ToDoBoard";
+import {FilterPriorityValuesType, TaskType} from "../../ToDoBoard";
 
 type PropsType = {
   name: string

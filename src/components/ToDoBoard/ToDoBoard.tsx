@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {v1} from 'uuid';
-import {ToDoList} from "../ToDoList/ToDoList";
+import {ToDoList} from "./components/ToDoList/ToDoList";
 
 
 export type TaskType = {
@@ -35,7 +35,6 @@ export function ToDoBoard () {
     setFilter(value)
   }
 
-  // TODO зарефакторить бы на switch case, но что-то не растет - не выводит All при первой отрисовке
   let taskForTodoList = tasks
   if (filter === "low") {
     taskForTodoList = tasks.filter(t => t.priority === "low")

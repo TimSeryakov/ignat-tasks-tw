@@ -3,7 +3,7 @@ import fuji from '../../assets/img/fuji.png';
 import koifish from '../../assets/img/koifish.png';
 import luckycat from '../../assets/img/luckycat.png';
 import lionstatue from '../../assets/img/lionstatue.png';
-import {MessageBubble} from "../MessageBubble/MessageBubble";
+import {MessageBubble} from "./components/MessageBubble/MessageBubble";
 
 export function Chat () {
   return (
