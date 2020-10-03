@@ -1,14 +1,13 @@
 import React from "react";
-import s from './Chat.module.css'
 import fuji from '../../assets/img/fuji.png';
 import koifish from '../../assets/img/koifish.png';
 import luckycat from '../../assets/img/luckycat.png';
 import lionstatue from '../../assets/img/lionstatue.png';
-import { MessageBubble } from "../MessageBubble/MessageBubble";
+import {MessageBubble} from "../MessageBubble/MessageBubble";
 
-export const Chat = () => {
+export function Chat () {
   return (
-      <section className={s.chat}>
+      <section>
         <MessageBubble incoming={true} name="Jack" avatar={fuji} date={"29.09.2020"}
                        text="(TypeScript) домашка от меня №1: создать проект и прислать архив мне или выложить на github и прислать мне ссылку: - любую домашку вы НЕ обязаны делать самостоятельно, если что-то не получается - пишем мне или на хэлп - учитывая что все домашки будут в 1 проекте - лучше сделать дополнительную компоненту в Аpp и внутри новой компоненты писать там код домашки"/>
 

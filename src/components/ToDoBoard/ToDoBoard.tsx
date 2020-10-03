@@ -13,7 +13,7 @@ export type PriorityValuesType = "height" | "middle" | "low"
 export type FilterPriorityValuesType = "all" | "height" | "middle" | "low"
 
 
-export const ToDoBoard = (props: TaskType) => {
+export function ToDoBoard () {
 
   const [tasks, setTasks] = useState<Array<TaskType>>(
       [

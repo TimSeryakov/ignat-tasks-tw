@@ -9,7 +9,7 @@ type MessageBubbleType = {
   incoming: boolean
 }
 
-export const MessageBubble = (props: MessageBubbleType) => {
+export function MessageBubble (props: MessageBubbleType) {
   return (
       <section>
         <div className={`${s['message-bubble']} ${props.incoming ? s['message-bubble--left'] : s['message-bubble--right']}`}>

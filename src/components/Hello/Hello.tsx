@@ -6,7 +6,7 @@ type VisitorType = {
   name: string
 }
 
-export const Hello = () => {
+export function Hello () {
 
   const [name, setName] = useState<string>("")
   const [visitors, setVisitors] = useState<Array<VisitorType>>([])

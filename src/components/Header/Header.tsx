@@ -2,7 +2,7 @@ import React from "react";
 import {NavLink} from "react-router-dom";
 
 
-export const Header = () => {
+export function Header () {
   return (
 
       <header className="flex justify-center h-32">
