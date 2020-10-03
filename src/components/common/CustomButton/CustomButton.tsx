@@ -19,10 +19,10 @@ export const CustomButton: FC<CustomButtonType> = (
     }
 ) => {
 
-  const style = `bg-${color}-200 hover:bg-${color}-300 active:bg-${color}-400 h-${Sizes[size]} 
+  const style = `bg-${color}-200 hover:bg-${color}-300 active:bg-${color}-400 h-${Sizes[size]} px-${size === "big" ? "10" : "5"} 
                  text-gray-800 inline-flex appearance-none items-center justify-center transition-all duration-200 
                  select-none relative whitespace-no-wrap align-middle leading-tight outline-none focus:outline-none 
-                 min-w-10 text-base px-4 focus:shadow-outline font-semibold rounded-md mr-4`
+                 min-w-10 text-base focus:shadow-outline font-semibold rounded-md mr-4`
 
   return (
       <button className={style}>{title}</button>
