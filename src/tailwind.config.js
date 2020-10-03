@@ -44,6 +44,9 @@ module.exports = {
     // },
   },
   variants: {},
+  experimental: {
+    applyComplexClasses: true
+  },
   corePlugins: {
     container: false,
   },
