@@ -1,5 +1,7 @@
 import React from "react";
 import {FilterPriorityValuesType, TaskType} from "../../ToDoBoard";
+import {CustomInput} from "../../../common/CustomInput/CustomInput";
+import {CustomButton} from "../../../common/CustomButton/CustomButton";
 
 type PropsType = {
   name: string
@@ -38,7 +40,7 @@ export function ToDoList(props: PropsType) {
   }
 
   return (
-      <section className="w-full flex justify-center text-gray-100">
+      <section className="w-full flex justify-center text-gray-100 mt-10">
         <div className="border bg-gray-700 inline-block p-6 rounded-lg text-left">
           <h3 className="text-2xl pb-4">{props.name}</h3>
           <ul className="list-none">
@@ -46,10 +48,11 @@ export function ToDoList(props: PropsType) {
           </ul>
           <div>
             <h4 className="text-xl pb-2 pt-4">Priority filter:</h4>
-            <button onClick={onSetAllFilterClick} className="m-1 p-1 bg-gray-800 text-white rounded-md p-2">All</button>
-            <button onClick={onSetHeightFilterClick} className="m-1 p-1 bg-red-600 text-white rounded-md p-2">Height</button>
-            <button onClick={onSetMiddleFilterClick} className="m-1 p-1 bg-blue-600 text-white rounded-md p-2">Middle</button>
-            <button onClick={onSetLowFilterClick} className="m-1 p-1 bg-green-600 text-white rounded-md p-2">Low</button>
+
+            <CustomButton onClickFn={onSetAllFilterClick} title="All" color="yellow"/>
+            <CustomButton onClickFn={onSetHeightFilterClick} title="Height" color="red"/>
+            <CustomButton onClickFn={onSetMiddleFilterClick} title="Middle" color="blue"/>
+            <CustomButton onClickFn={onSetLowFilterClick} title="Low" color="green"/>
           </div>
         </div>
       </section>

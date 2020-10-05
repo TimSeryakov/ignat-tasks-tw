@@ -1,6 +1,6 @@
 import React, {FC, KeyboardEvent} from 'react';
 
-type CustomInputType = {
+type CustomInputType = { // TODO добавить onChange
   onPressEnter?: () => void
   placeHolder?: string
   haveError?: boolean

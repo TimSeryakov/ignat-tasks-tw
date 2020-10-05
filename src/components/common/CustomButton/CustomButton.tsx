@@ -2,6 +2,7 @@ import React, {FC} from 'react';
 
 type CustomButtonType = {
   title: string
+  onClickFn: () => void
   color?: "teal" | "green" | "red" | "blue" | "pink" | "purple" | "orange" | "yellow"
   size?: "small" | "normal" | "big"
 }
@@ -15,7 +16,7 @@ enum Sizes {
 
 export const CustomButton: FC<CustomButtonType> = (
     {
-      title, color = "teal", size = "normal"
+      title, onClickFn, color = "teal", size = "normal"
     }
 ) => {
 
@@ -25,7 +26,7 @@ export const CustomButton: FC<CustomButtonType> = (
                  min-w-10 text-base focus:shadow-outline font-semibold rounded-md mr-4`
 
   return (
-      <button className={style}>{title}</button>
+      <button className={style} onClick={() => {onClickFn()}}>{title}</button>
   )
 }
 

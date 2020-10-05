@@ -1,5 +1,7 @@
 import React, {ChangeEvent, KeyboardEvent, useState} from "react";
 import {v1} from "uuid";
+import {CustomButton} from "../common/CustomButton/CustomButton";
+import {CustomInput} from "../common/CustomInput/CustomInput";
 
 type VisitorType = {
   id: string
@@ -38,7 +40,7 @@ export function Hello () {
       <section className="pt-64">
 
         <div className="flex pb-3 py-4 px-4 w-64 mx-auto">
-          <input
+          <input // TODO заменить
               className="flex-grow border-gray-500 px-3 py-1 mr-2 border bg-gray-300 rounded-md text-gray-900 focus:outline-none focus:shadow-outline"
               placeholder="Enter your name..."
 
@@ -46,11 +48,10 @@ export function Hello () {
               onChange={onChangeTitle}
               onKeyPress={onKeyPress}
           />
-          <button
-              className="bg-blue-400 text-white px-4 py-2 rounded-md focus:outline-none focus:shadow-outline"
-              onClick={onGreetingsButtonClick}>
-            Post
-          </button>
+          {/*<CustomInput onPressEnter={onKeyPress}/>*/}
+
+
+          <CustomButton title="Boom!" onClickFn={onGreetingsButtonClick} color="blue"/>
         </div>
 
         <div className="text-center">
