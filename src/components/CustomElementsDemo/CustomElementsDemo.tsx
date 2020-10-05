@@ -1,10 +1,26 @@
 import React from "react";
 import {CustomButton} from "../common/CustomButton/CustomButton";
+import {CustomInput} from "../common/CustomInput/CustomInput";
+import './CustomElementsDemo.css'
 
 export function CustomElementsDemo() {
   return (
-      <section className="mt-16 text-center">
-        <h1 className="p-10 text-2xl font-bold text-gray-700">Custom Elements Demonstration</h1>
+      <section className="custom-elements-demo mt-1 text-center">
+        <h1 className="p-10 font-mono text-3xl text-gray-700">Custom Elements Demonstration</h1>
+
+        <div className="mb-12">
+          <div className="mb-4">
+            <CustomInput/>
+          </div>
+          <div className="mb-4">
+            <CustomInput placeHolder="Enter you name..."/>
+          </div>
+          <div className="mb-4">
+            <CustomInput onPressEnter={() => {
+              console.log("Hi there!")
+            }} haveError={true}/>
+          </div>
+        </div>
 
         <div className="mb-4">
           <CustomButton title="Default"/>

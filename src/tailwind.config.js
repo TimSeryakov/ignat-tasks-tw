@@ -1,4 +1,4 @@
-// const defaultTheme = require("tailwindcss/defaultTheme");
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   purge: {
@@ -38,10 +38,6 @@ module.exports = {
       //   "button-green-hover": "#4FD1C5",
       // },
     },
-    // fontFamily: {
-    //   sans: ["Play", ...defaultTheme.fontFamily.sans],
-    //   "ubuntu": ["Ubuntu", ...defaultTheme.fontFamily.sans],
-    // },
   },
   variants: {},
   experimental: {
