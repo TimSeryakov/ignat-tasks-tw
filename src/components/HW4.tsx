@@ -20,7 +20,7 @@ function HW4() {
     return (
         <div className="py-5 text-center">
 
-          <h1 className="p-10 text-3xl text-gray-700 lowercase font-major">homeworks 4</h1>
+          <h1 className="p-10 text-3xl text-gray-700 lowercase font-major">homework 4</h1>
 
 
             <div className="flex flex-col items-center">
