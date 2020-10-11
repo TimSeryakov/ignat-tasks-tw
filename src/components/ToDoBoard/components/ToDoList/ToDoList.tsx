@@ -1,6 +1,5 @@
 import React from "react";
 import {FilterPriorityValuesType, TaskType} from "../../ToDoBoard";
-import {CustomInput} from "../../../common/CustomInput/CustomInput";
 import {CustomButton} from "../../../common/CustomButton/CustomButton";
 
 type PropsType = {
