@@ -48,7 +48,7 @@ export function ToDoList(props: PropsType) {
           <div>
             <h4 className="text-xl pb-2 pt-4">Priority filter:</h4>
 
-            <CustomButton onClick={onSetAllFilterClick} color="yellow">Al</CustomButton>
+            <CustomButton onClick={onSetAllFilterClick} color="yellow">All</CustomButton>
             <CustomButton onClick={onSetHeightFilterClick} color="red">Height</CustomButton>
             <CustomButton onClick={onSetMiddleFilterClick} color="blue">Middle</CustomButton>
             <CustomButton onClick={onSetLowFilterClick} color="green">Low</CustomButton>
