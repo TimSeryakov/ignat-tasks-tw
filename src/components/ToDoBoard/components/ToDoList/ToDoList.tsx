@@ -49,10 +49,10 @@ export function ToDoList(props: PropsType) {
           <div>
             <h4 className="text-xl pb-2 pt-4">Priority filter:</h4>
 
-            <CustomButton onClickFn={onSetAllFilterClick} title="All" color="yellow"/>
-            <CustomButton onClickFn={onSetHeightFilterClick} title="Height" color="red"/>
-            <CustomButton onClickFn={onSetMiddleFilterClick} title="Middle" color="blue"/>
-            <CustomButton onClickFn={onSetLowFilterClick} title="Low" color="green"/>
+            <CustomButton onClick={onSetAllFilterClick} title="All" color="yellow"/>
+            <CustomButton onClick={onSetHeightFilterClick} title="Height" color="red"/>
+            <CustomButton onClick={onSetMiddleFilterClick} title="Middle" color="blue"/>
+            <CustomButton onClick={onSetLowFilterClick} title="Low" color="green"/>
           </div>
         </div>
       </section>

@@ -3,10 +3,9 @@ import React, {ChangeEvent, DetailedHTMLProps, InputHTMLAttributes, useState} fr
 type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>;
 
 type CustomCheckboxPropsType = DefaultInputPropsType & {
-  // title: string
   initValue: boolean
   onChangeCheckedHandler?: (checked: boolean) => void
-  customClassName?: string
+  customSpanClassName?: string
 };
 
 export const CustomCheckbox: React.FC<CustomCheckboxPropsType> = (
@@ -16,26 +15,33 @@ export const CustomCheckbox: React.FC<CustomCheckboxPropsType> = (
 
         type, // достаём и игнорируем чтоб нельзя было задать другой тип инпута
         onChange, onChangeCheckedHandler,
-        className, customClassName,
+        className, customSpanClassName,
         children, // в эту переменную попадёт текст, типизировать не нужно так как он затипизирован в React.FC
 
         ...restProps// все остальные пропсы попадут в объект restProps
 
 }
 ) => {
-  const [valueFromParent, setValueFromParent] = useState<boolean>(initValue)
+  const [value, setValue] = useState<boolean>(initValue)
   const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
-    setValueFromParent(e.currentTarget.checked)
+    setValue(e.currentTarget.checked)
+    onChangeCheckedHandler && onChangeCheckedHandler(e.currentTarget.checked)
   }
+
+  const checkboxStyle = `${className ? className : ""}`
+  const spanStyle = `pl-1 ${customSpanClassName ? customSpanClassName : ""}`
 
   return (
       <label>
         <input
             type="checkbox"
-            checked={valueFromParent}
+            className={checkboxStyle}
+            checked={value}
             onChange={onChangeHandler}
+
+            {...restProps} // отдаём инпуту остальные пропсы если они есть (checked например там внутри)
         />
-        <span> zxc</span>
-      </label>
+        {children && <span className={spanStyle}>{children}</span>}
+      </label> // благодаря label нажатие на спан передастся в инпут
   )
 }

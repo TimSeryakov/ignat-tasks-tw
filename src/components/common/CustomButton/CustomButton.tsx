@@ -4,7 +4,6 @@ type DefaultButtonPropsType = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonE
 
 type CustomButtonType =  DefaultButtonPropsType & {
   title: string
-  onClickFn: () => void
   color?: "teal" | "green" | "red" | "blue" | "pink" | "purple" | "orange" | "yellow"
   size?: "small" | "normal" | "big"
 }
@@ -18,7 +17,7 @@ enum Sizes {
 
 export const CustomButton: FC<CustomButtonType> = (
     {
-      title, onClickFn, color = "teal", size = "normal",
+      title, color = "teal", size = "normal",
       className, ...restProps
     }
 ) => {
@@ -33,7 +32,6 @@ export const CustomButton: FC<CustomButtonType> = (
   return (
       <button
           className={buttonStyle}
-          onClick={() => {onClickFn()}}
           {...restProps}
       >
         {title}

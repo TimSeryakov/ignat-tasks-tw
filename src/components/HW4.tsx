@@ -9,10 +9,10 @@ import {CustomCheckbox} from "./common/CustomCheckbox/CustomCheckbox";
 
 function HW4() {
     const [text, setText] = useState<string>("");
-    const error = text ? "" : "error";
+    const errorMessage = text ? "" : "Error Message Text Goes Here";
     const showAlert = () => {
-        if (error) {
-            alert("введите текст...");
+        if (errorMessage) {
+            alert("Введите текст...");
         } else {
             alert(text); // если нет ошибки показать текст
         }
@@ -28,21 +28,21 @@ function HW4() {
 
             <div className={s.column}>
                 {/*should work (должно работать)*/}
-                <SuperInputText
+                <CustomInput
                     value={text}
                     onChangeText={setText}
-                    onEnter={showAlert}
-                    error={error}
-                    // className={s.blue} // проверьте, рабоет ли смешивание классов
+                    onPressEnter={showAlert}
+                    errorMessage={errorMessage}
+                    // className={"bg-green-500 placeholder-white"} // РАБОТАЕТ // проверьте, работает ли смешивание классов
                 />
 
                 {/*should work (должно работать)*/}
-                <SuperButton
-                    red // пропсу с булевым значением не обязательно указывать true
+                <CustomButton
+                    title={"zxc"}
+                    color={"red"} // пропсу с булевым значением не обязательно указывать true
                     onClick={showAlert}
-                >
+                />
                     delete {/*// название кнопки попадёт в children*/}
-                </SuperButton>
 
                 {/*should work (должно работать)*/}
                 <SuperCheckbox
@@ -64,8 +64,8 @@ function HW4() {
             <hr/>
             <div>
               <CustomInput/>
-              <CustomButton title={"zxc"} onClickFn={() => {}}/>
-              <CustomCheckbox initValue={false}/>
+              <CustomButton title={"zxc"} onClick={() => {}}/>
+              <CustomCheckbox initValue={false} children={"zxczxc"}/>
             </div>
         </div>
     );
