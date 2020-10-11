@@ -28,42 +28,42 @@ export function CustomElementsDemo() {
         </div>
 
         <div className="mb-4">
-          <CustomButton onClick={clicked} title="Default"/>
-          <CustomButton onClick={clicked} title="Default" color="red"/>
-          <CustomButton onClick={clicked} title="Default" color="blue"/>
-          <CustomButton onClick={clicked} title="Default" color="green"/>
+          <CustomButton onClick={clicked}>Default</CustomButton>
+          <CustomButton onClick={clicked} color="red">Default</CustomButton>
+          <CustomButton onClick={clicked} color="blue">Default</CustomButton>
+          <CustomButton onClick={clicked} color="green">Default</CustomButton>
         </div>
 
         <div className="mb-10">
-          <CustomButton onClick={clicked} title="Default" color="purple"/>
-          <CustomButton onClick={clicked} title="Default" color="orange"/>
-          <CustomButton onClick={clicked} title="Default" color="pink"/>
-          <CustomButton onClick={clicked} title="Default" color="yellow"/>
+          <CustomButton onClick={clicked}color="purple">Default</CustomButton>
+          <CustomButton onClick={clicked}color="orange">Default</CustomButton>
+          <CustomButton onClick={clicked}color="pink">Default</CustomButton>
+          <CustomButton onClick={clicked}color="yellow">Default</CustomButton>
         </div>
 
         <div className="mb-4">
-          <CustomButton onClick={clicked} title="Big" size="big"/>
-          <CustomButton onClick={clicked} title="Big" color="red" size="big"/>
-          <CustomButton onClick={clicked} title="Big" color="blue" size="big"/>
-          <CustomButton onClick={clicked} title="Big" color="green" size="big"/>
+          <CustomButton onClick={clicked} size="big">Big</CustomButton>
+          <CustomButton onClick={clicked} color="red" size="big">Big</CustomButton>
+          <CustomButton onClick={clicked} color="blue" size="big">Big</CustomButton>
+          <CustomButton onClick={clicked} color="green" size="big">Big</CustomButton>
         </div>
         <div className="mb-10">
-          <CustomButton onClick={clicked} title="Big" color="purple" size="big"/>
-          <CustomButton onClick={clicked} title="Big" color="orange" size="big"/>
-          <CustomButton onClick={clicked} title="Big" color="pink" size="big"/>
-          <CustomButton onClick={clicked} title="Big" color="yellow" size="big"/>
+          <CustomButton onClick={clicked} color="purple" size="big">Big</CustomButton>
+          <CustomButton onClick={clicked} color="orange" size="big">Big</CustomButton>
+          <CustomButton onClick={clicked} color="pink" size="big">Big</CustomButton>
+          <CustomButton onClick={clicked} color="yellow" size="big">Big</CustomButton>
         </div>
         <div className="mb-4">
-          <CustomButton onClick={clicked} title="Small" size="small"/>
-          <CustomButton onClick={clicked} title="Small" color="red" size="small"/>
-          <CustomButton onClick={clicked} title="Small" color="blue" size="small"/>
-          <CustomButton onClick={clicked} title="Small" color="green" size="small"/>
+          <CustomButton onClick={clicked} size="small">Small</CustomButton>
+          <CustomButton onClick={clicked} color="red" size="small">Small</CustomButton>
+          <CustomButton onClick={clicked} color="blue" size="small">Small</CustomButton>
+          <CustomButton onClick={clicked} color="green" size="small">Small</CustomButton>
         </div>
         <div className="mb-10">
-          <CustomButton onClick={clicked} title="Small" color="purple" size="small"/>
-          <CustomButton onClick={clicked} title="Small" color="orange" size="small"/>
-          <CustomButton onClick={clicked} title="Small" color="pink" size="small"/>
-          <CustomButton onClick={clicked} title="Small" color="yellow" size="small"/>
+          <CustomButton onClick={clicked} color="purple" size="small">Small</CustomButton>
+          <CustomButton onClick={clicked} color="orange" size="small">Small</CustomButton>
+          <CustomButton onClick={clicked} color="pink" size="small">Small</CustomButton>
+          <CustomButton onClick={clicked} color="yellow" size="small">Small</CustomButton>
         </div>
       </section>
   )

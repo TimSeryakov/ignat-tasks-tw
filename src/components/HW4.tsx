@@ -1,7 +1,4 @@
 import React, {ChangeEvent, useState} from "react";
-import SuperInputText from "./common/SuperInputText/SuperInputText";
-import s from "./HW4.module.css";
-import SuperButton from "./common/SuperButton/SuperButton";
 import SuperCheckbox from "./common/SuperCheckbox/SuperCheckbox";
 import {CustomInput} from "./common/CustomInput/CustomInput";
 import {CustomButton} from "./common/CustomButton/CustomButton";
@@ -18,15 +15,15 @@ function HW4() {
         }
     }
 
-    const [checked, setChecked] = useState<boolean>(false);
-    const testOnChange = (e: ChangeEvent<HTMLInputElement>) => setChecked(e.currentTarget.checked);
+    const [checkedValue, setCheckedValue] = useState<boolean>(false);
+    const testOnChange = (e: ChangeEvent<HTMLInputElement>) => setCheckedValue(e.currentTarget.checked);
 
     return (
         <div>
             <hr/>
             homeworks 4
 
-            <div className={s.column}>
+            <div className="flex flex-col items-center">
                 {/*should work (должно работать)*/}
                 <CustomInput
                     value={text}
@@ -36,24 +33,22 @@ function HW4() {
                     // className={"bg-green-500 placeholder-white"} // РАБОТАЕТ // проверьте, работает ли смешивание классов
                 />
 
-                {/*should work (должно работать)*/}
                 <CustomButton
-                    title={"zxc"}
-                    color={"red"} // пропсу с булевым значением не обязательно указывать true
+                    color="red"
                     onClick={showAlert}
-                />
-                    delete {/*// название кнопки попадёт в children*/}
-
-                {/*should work (должно работать)*/}
-                <SuperCheckbox
-                    checked={checked}
-                    onChangeChecked={setChecked}
                 >
-                    some text {/*// этот текст попадёт в children*/}
-                </SuperCheckbox>
+                    Delete {/*// название кнопки попадёт в children*/}
+                </CustomButton>
+
+                <CustomCheckbox
+                    checked={checkedValue}
+                    onChangeChecked={setCheckedValue}
+                >
+                    Some text {/*// этот текст попадёт в children*/}
+                </CustomCheckbox>
 
                 {/*// onChange тоже должен работать*/}
-                <SuperCheckbox checked={checked} onChange={testOnChange}/>
+                <SuperCheckbox checked={checkedValue} onChange={testOnChange}/>
             </div>
 
             <hr/>
@@ -62,11 +57,7 @@ function HW4() {
             {/*<AlternativeSuperButton/>*/}
             {/*<AlternativeSuperCheckbox/>*/}
             <hr/>
-            <div>
-              <CustomInput/>
-              <CustomButton title={"zxc"} onClick={() => {}}/>
-              <CustomCheckbox initValue={false} children={"zxczxc"}/>
-            </div>
+
         </div>
     );
 }

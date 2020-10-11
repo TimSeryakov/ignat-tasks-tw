@@ -3,18 +3,14 @@ import React, {ChangeEvent, DetailedHTMLProps, InputHTMLAttributes, useState} fr
 type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>;
 
 type CustomCheckboxPropsType = DefaultInputPropsType & {
-  initValue: boolean
-  onChangeCheckedHandler?: (checked: boolean) => void
+  onChangeChecked?: (checked: boolean) => void
   customSpanClassName?: string
 };
 
 export const CustomCheckbox: React.FC<CustomCheckboxPropsType> = (
     {
-        // title,
-        initValue,
-
         type, // достаём и игнорируем чтоб нельзя было задать другой тип инпута
-        onChange, onChangeCheckedHandler,
+        onChange, onChangeChecked,
         className, customSpanClassName,
         children, // в эту переменную попадёт текст, типизировать не нужно так как он затипизирован в React.FC
 
@@ -22,10 +18,10 @@ export const CustomCheckbox: React.FC<CustomCheckboxPropsType> = (
 
 }
 ) => {
-  const [value, setValue] = useState<boolean>(initValue)
+  const [value, setValue] = useState<boolean>(false)
   const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
     setValue(e.currentTarget.checked)
-    onChangeCheckedHandler && onChangeCheckedHandler(e.currentTarget.checked)
+    onChangeChecked && onChangeChecked(e.currentTarget.checked)
   }
 
   const checkboxStyle = `${className ? className : ""}`

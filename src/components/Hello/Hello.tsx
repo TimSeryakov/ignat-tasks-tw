@@ -54,7 +54,7 @@ export function Hello () {
           />
 
 
-          <CustomButton title="Boom!" onClick={onGreetingsButtonClick} color="blue"/>
+          <CustomButton onClick={onGreetingsButtonClick} color="blue">Boom!</CustomButton>
         </div>
 
         <div className="text-center">
