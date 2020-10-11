@@ -23,7 +23,7 @@ export const CustomButton: FC<CustomButtonType> = (
     }
 ) => {
 
-  const buttonStyle = `${className} 
+  const buttonStyle = `${className ? className : ""} 
                  bg-${color}-200 hover:bg-${color}-300 active:bg-${color}-400 h-${Sizes[size]} 
                  px-${size === "big" ? "10" : "5"} text-gray-800 inline-flex appearance-none 
                  items-center justify-center transition-all duration-200 select-none relative 

@@ -11,19 +11,19 @@ export function CustomElementsDemo() {
 
   return (
       <section className="custom-elements-demo mt-1 text-center">
-        <h1 className="p-10 font-mono text-3xl text-gray-700">Custom Elements Demonstration</h1>
+        <h1 className="p-10 font-mono text-3xl text-gray-700 lowercase">Custom Elements Demonstration</h1>
 
         <div className="mb-12">
           <div className="mb-4">
             <CustomInput/>
           </div>
           <div className="mb-4">
-            <CustomInput placeHolder="Enter you name..."/>
-          </div>
-          <div className="mb-4">
             <CustomInput onPressEnter={() => {
               console.log("Hi there!")
-            }} haveError={true}/>
+            }} errorMessage="Some error text!"/>
+          </div>
+          <div className="mb-4">
+            <CustomInput placeHolder="Enter you name..."/>
           </div>
         </div>
 
