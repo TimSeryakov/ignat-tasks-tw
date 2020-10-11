@@ -10,7 +10,7 @@ export function CustomElementsDemo() {
   }
 
   return (
-      <section className="custom-elements-demo mt-1 text-center">
+      <section className="custom-elements-demo mt-1 text-center pb-10">
         <h1 className="p-10 font-mono text-3xl text-gray-700 lowercase">Custom Elements Demonstration</h1>
 
         <div className="mb-12">
