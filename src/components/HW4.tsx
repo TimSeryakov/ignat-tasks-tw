@@ -1,5 +1,4 @@
 import React, {ChangeEvent, useState} from "react";
-import SuperCheckbox from "./common/SuperCheckbox/SuperCheckbox";
 import {CustomInput} from "./common/CustomInput/CustomInput";
 import {CustomButton} from "./common/CustomButton/CustomButton";
 import {CustomCheckbox} from "./common/CustomCheckbox/CustomCheckbox";
@@ -19,27 +18,33 @@ function HW4() {
     const testOnChange = (e: ChangeEvent<HTMLInputElement>) => setCheckedValue(e.currentTarget.checked);
 
     return (
-        <div>
-            <hr/>
-            homeworks 4
+        <div className="py-5 text-center">
+
+          <h1 className="p-10 text-3xl text-gray-700 lowercase font-major">homeworks 4</h1>
+
 
             <div className="flex flex-col items-center">
                 {/*should work (должно работать)*/}
+              <div className="p-5">
                 <CustomInput
-                    value={text}
-                    onChangeText={setText}
-                    onPressEnter={showAlert}
-                    errorMessage={errorMessage}
-                    // className={"bg-green-500 placeholder-white"} // РАБОТАЕТ // проверьте, работает ли смешивание классов
-                />
+                  value={text}
+                  onChangeText={setText}
+                  onPressEnter={showAlert}
+                  errorMessage={errorMessage}
+                  // className={"bg-green-500 placeholder-white"} // РАБОТАЕТ // проверьте, работает ли смешивание классов
+              />
+              </div>
 
+              <div className="p-5">
                 <CustomButton
                     color="red"
                     onClick={showAlert}
                 >
                     Delete {/*// название кнопки попадёт в children*/}
                 </CustomButton>
+              </div>
 
+              <div className="p-5">
                 <CustomCheckbox
                     checked={checkedValue}
                     onChangeChecked={setCheckedValue}
@@ -47,17 +52,11 @@ function HW4() {
                     Some text {/*// этот текст попадёт в children*/}
                 </CustomCheckbox>
 
+                <br/>
                 {/*// onChange тоже должен работать*/}
-                <SuperCheckbox checked={checkedValue} onChange={testOnChange}/>
+                <CustomCheckbox checked={checkedValue} onChange={testOnChange}/>
+                </div>
             </div>
-
-            <hr/>
-            {/*для личного творчества, могу проверить*/}
-            {/*<AlternativeSuperInputText/>*/}
-            {/*<AlternativeSuperButton/>*/}
-            {/*<AlternativeSuperCheckbox/>*/}
-            <hr/>
-
         </div>
     );
 }

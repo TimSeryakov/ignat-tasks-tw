@@ -20,7 +20,7 @@ export function Header () {
             <NavLink to="/custom-elements-demo" className="mt-10 mx-3 p-3 rounded-md bg-green-200 text-green-700 hover:bg-red-200"><b>Custom Elements Demo</b> (Task 04) </NavLink>
           </li>
           <li className="inline-block mt-10">
-            <NavLink to="/HW4" className="mt-10 mx-3 p-3 rounded-md bg-green-200 text-green-700 hover:bg-red-200"><b>Код Игната</b> (Task 04) </NavLink>
+            <NavLink to="/HW4" className="mt-10 mx-3 p-3 rounded-md bg-green-200 text-green-700 hover:bg-red-200"><b>Код Игната (HW4)</b> (Task 04) </NavLink>
           </li>
         </ul>
       </header>

@@ -1,7 +1,6 @@
 import React from "react";
 import {CustomButton} from "../common/CustomButton/CustomButton";
 import {CustomInput} from "../common/CustomInput/CustomInput";
-import './CustomElementsDemo.css'
 
 export function CustomElementsDemo() {
 
@@ -10,8 +9,8 @@ export function CustomElementsDemo() {
   }
 
   return (
-      <section className="custom-elements-demo mt-1 text-center pb-10">
-        <h1 className="p-10 font-mono text-3xl text-gray-700 lowercase">Custom Elements Demonstration</h1>
+      <section className="mt-1 text-center pb-10">
+        <h1 className="p-10 font-major text-3xl text-gray-700 lowercase">Custom Elements Demonstration</h1>
 
         <div className="mb-12">
           <div className="mb-4">
@@ -23,7 +22,7 @@ export function CustomElementsDemo() {
             }} errorMessage="Some error text!"/>
           </div>
           <div className="mb-4">
-            <CustomInput placeHolder="Enter you name..."/>
+            <CustomInput placeHolder="Enter your name..."/>
           </div>
         </div>
 
@@ -35,10 +34,10 @@ export function CustomElementsDemo() {
         </div>
 
         <div className="mb-10">
-          <CustomButton onClick={clicked}color="purple">Default</CustomButton>
-          <CustomButton onClick={clicked}color="orange">Default</CustomButton>
-          <CustomButton onClick={clicked}color="pink">Default</CustomButton>
-          <CustomButton onClick={clicked}color="yellow">Default</CustomButton>
+          <CustomButton onClick={clicked} color="purple">Default</CustomButton>
+          <CustomButton onClick={clicked} color="orange">Default</CustomButton>
+          <CustomButton onClick={clicked} color="pink">Default</CustomButton>
+          <CustomButton onClick={clicked} color="yellow">Default</CustomButton>
         </div>
 
         <div className="mb-4">
