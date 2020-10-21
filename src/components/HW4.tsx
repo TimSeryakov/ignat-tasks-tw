@@ -54,7 +54,10 @@ function HW4() {
 
                 <br/>
                 {/*// onChange тоже должен работать*/}
-                <CustomCheckbox checked={checkedValue} onChange={testOnChange}/>
+                <CustomCheckbox
+                    checked={checkedValue}
+                    onChange={testOnChange}
+                />
                 </div>
             </div>
         </div>

@@ -1,6 +1,7 @@
 {
   "name": "ignat-tasks-tw",
   "version": "0.1.0",
+  "homepage": "https://timseryakov.github.io/ignat-tasks-tw",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.3",
@@ -10,7 +11,7 @@
     "@types/node": "^14.0.27",
     "@types/react": "^16.9.46",
     "@types/react-dom": "^16.9.8",
-    "@types/react-router-dom": "^5.1.5",
+    "@types/react-router-dom": "^5.1.6",
     "@types/uuid": "^8.3.0",
     "cross-env": "^7.0.2",
     "npm-run-all": "^4.1.5",
@@ -33,8 +34,8 @@
     "watch:css": "cross-env NODE_ENV=development postcss src/styles/tailwind.css -o src/styles/index.css --watch",
     "react-scripts:start": "ping 127.0.0.1 -n 11 > nul && react-scripts start",
     "react-scripts:build": "react-scripts build",
-    "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -54,6 +55,7 @@
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "babel-loader": "^8.1.0",
+    "gh-pages": "^3.1.0",
     "react-is": "^16.13.1"
   }
 }
