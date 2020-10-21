@@ -1,12 +1,19 @@
 import React from "react";
+import './MenuAside.css'
 import {NavLink} from "react-router-dom";
 
 
-export function Header () {
+export function MenuAside () {
   return (
 
-      <header className="flex justify-center pb-10">
-        <ul className="">
+      <>
+        <input type="checkbox" id="hmt" className="hidden-menu-ticker"/>
+        <label className="btn-menu" htmlFor="hmt">
+          <span className="first"/>
+          <span className="second"/>
+          <span className="third"/>
+        </label>
+        <ul className="hidden-menu flex-col">
           <li className="inline-block mt-10">
             <NavLink to="/chat" className="mt-10 mx-3 p-3 rounded-md bg-green-200 text-green-700 hover:bg-red-200"><b>Chat</b> (Task 01) </NavLink>
           </li>
@@ -33,7 +40,10 @@ export function Header () {
             <NavLink to="/junior-plus" className="mt-10 mx-3 p-3 rounded-md bg-blue-200 text-blue-700 hover:bg-red-200"><b>Junior+</b></NavLink>
           </li>
         </ul>
-      </header>
+
+      </>
+
+
 
   )
 }

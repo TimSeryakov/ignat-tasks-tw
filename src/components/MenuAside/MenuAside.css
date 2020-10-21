@@ -1,0 +1,71 @@
+.hidden-menu {
+  display: flex;
+  position: fixed;
+  list-style:none;
+  padding: 40px 10px;
+  margin: 0;
+  box-sizing: border-box;
+  width: 350px;
+  background-color: #eee;
+  height: 100%;
+  top: 0;
+  left: -350px;
+  transition: left .2s;
+  z-index: 2;
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.54);
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+}
+.hidden-menu-ticker {
+  display: none;
+}
+.btn-menu {
+  color: #fff;
+  background-color: #666;
+  border-radius: 10%;
+  padding: 10px;
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  cursor: pointer;
+  transition: left .23s;
+  z-index: 3;
+  width: 50px;
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+}
+.btn-menu span {
+  display: block;
+  border-radius: 15%;
+  height: 5px;
+  background-color: #fff;
+  margin: 5px 0 0;
+  transition: all .1s linear .23s;
+  position: relative;
+}
+.btn-menu span.first {
+  margin-top: 0;
+}
+.hidden-menu-ticker:checked ~ .btn-menu {
+  left: 290px;
+}
+.hidden-menu-ticker:checked ~ .hidden-menu {
+  left: 0;
+}
+.hidden-menu-ticker:checked ~ .btn-menu span.first {
+  -webkit-transform: rotate(45deg);
+  top: 10px;
+}
+.hidden-menu-ticker:checked ~ .btn-menu span.second {
+  opacity: 0;
+}
+
+.hidden-menu-ticker:checked ~ .btn-menu span.third {
+  -webkit-transform: rotate(-45deg);
+  top: -10px;
+}
+
+.active {
+  /*background-color: #fff;*/
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
+}
