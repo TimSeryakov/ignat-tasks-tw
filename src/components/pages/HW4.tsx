@@ -1,7 +1,7 @@
 import React, {ChangeEvent, useState} from "react";
-import {CustomInput} from "./common/CustomInput/CustomInput";
-import {CustomButton} from "./common/CustomButton/CustomButton";
-import {CustomCheckbox} from "./common/CustomCheckbox/CustomCheckbox";
+import {CustomInput} from "../common/CustomInput/CustomInput";
+import {CustomButton} from "../common/CustomButton/CustomButton";
+import {CustomCheckbox} from "../common/CustomCheckbox/CustomCheckbox";
 
 function HW4() {
     const [text, setText] = useState<string>("");

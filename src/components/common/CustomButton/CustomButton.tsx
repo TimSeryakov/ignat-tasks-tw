@@ -26,7 +26,7 @@ export const CustomButton: FC<CustomButtonType> = (
          px-${size === "big" ? "10" : "5"} text-gray-800 inline-flex appearance-none 
          items-center justify-center transition-all duration-200 select-none relative 
          whitespace-no-wrap align-middle leading-tight outline-none focus:outline-none 
-         min-w-10 text-base focus:shadow-outline font-semibold rounded-md mr-4`
+         min-w-10 text-base focus:shadow-outline font-semibold rounded-md mx-2`
 
   return (
       <button

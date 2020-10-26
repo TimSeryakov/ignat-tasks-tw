@@ -8,7 +8,7 @@ import {ToDoBoard} from "./ToDoBoard/ToDoBoard";
 import {Chat} from "./Chat/Chat";
 import {Hello} from "./Hello/Hello";
 import {CustomElementsDemo} from "./CustomElementsDemo/CustomElementsDemo";
-import HW4 from "./HW4";
+import HW4 from "./pages/HW4";
 
 export const PATH = {
   PRE_JUNIOR: "/pre-junior",
