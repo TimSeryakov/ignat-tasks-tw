@@ -1,15 +1,12 @@
 import React from "react";
+import HW7 from "./HW7";
 
 function JuniorPlus() {
     return (
-        <div>
-
-
+        <div className="py-5">
+          <HW7/>
         </div>
     );
 }
 
-export default JuniorPlus;
-
-// сделайте по аналогии пустые страницы джун и джун+
-// туда будут добавляться следующие дз
+export default JuniorPlus
