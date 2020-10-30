@@ -2,12 +2,12 @@ import React, {ChangeEvent, InputHTMLAttributes, DetailedHTMLProps} from "react"
 
 type DefaultRadioPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
 
-type SuperRadioPropsType = DefaultRadioPropsType & {
-    options?: any[]
+type CustomRadioPropsType = DefaultRadioPropsType & {
+    options?: Array<any>
     onChangeOption?: (option: any) => void
 }
 
-const CustomRadio: React.FC<SuperRadioPropsType> = (
+const CustomRadio: React.FC<CustomRadioPropsType> = (
     {
         type, name,
         options, value,
@@ -15,19 +15,26 @@ const CustomRadio: React.FC<SuperRadioPropsType> = (
         ...restProps
     }
 ) => {
+
     const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
-        // onChange, onChangeOption
+      onChangeOption && onChangeOption(e.currentTarget.value)
     }
 
-
-    const mappedOptions: any[] = options ? options.map((o, i) => ( // map options with key
-        <label key={name + "-" + i}>
+    const mappedOptions: Array<any> = options ? options.map((o, i) => (
+        <span className={"px-3"}>
+          <label key={`${name} - ${i}`}>
             <input
                 type={"radio"}
-                // name, checked, value, onChange
+                name={o}
+                value={o}
+                checked={o === value}
+                onChange={onChangeCallback}
+
+                {...restProps}
             />
             {o}
-        </label>
+          </label>
+        </span>
     )) : [];
 
     return (

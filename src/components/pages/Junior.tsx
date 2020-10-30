@@ -1,12 +1,13 @@
 import React from "react";
+import HW7 from "./HW7";
 
 function Junior() {
-    return (
-        <div>
+  return (
+      <div className="py-5 text-center">
+        <HW7/>
+      </div>
 
-
-        </div>
-    );
+  );
 }
 
 export default Junior;
