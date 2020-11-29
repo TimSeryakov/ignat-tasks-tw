@@ -1,6 +1,6 @@
 import React from 'react';
-import {homeWorkReducer} from "../homeWorkReducer";
-import {PeoplesStateType, PeopleType} from "../../pages/HW8";
+import {sortReducer} from "../homeWorkReducer";
+import {PeoplesStateType, PeopleType} from "../../components/pages/HW8";
 
 let initialState: Array<PeopleType>
 
@@ -17,7 +17,7 @@ beforeEach(() => {
 })
 
 test("sort name alphabetically", () => {
-    const resultState: PeoplesStateType = homeWorkReducer(initialState, {type: "SORT", payload: "alphabetically"});
+    const resultState: PeoplesStateType = sortReducer(initialState, {type: "SORT", payload: "alphabetically"});
 
     console.log(resultState);
 
@@ -26,14 +26,14 @@ test("sort name alphabetically", () => {
 })
 
 test("sort name reverse alphabetically", () => {
-    const resultState: PeoplesStateType = homeWorkReducer(initialState, {type: "SORT", payload: "reverseAlphabetically"});
+    const resultState: PeoplesStateType = sortReducer(initialState, {type: "SORT", payload: "reverseAlphabetically"});
 
   expect(resultState[0].name).toBe("Яна")
   expect(resultState[6].name).toBe("Александр")
 })
 
 test("check age 18", () => {
-    const resultState: PeoplesStateType = homeWorkReducer(initialState, {type: "CHECK", payload: 18});
+    const resultState: PeoplesStateType = sortReducer(initialState, {type: "CHECK", payload: 18});
 
     expect(resultState[0].age).toBeGreaterThanOrEqual(18)
     expect(resultState[1].age).toBeGreaterThanOrEqual(18)

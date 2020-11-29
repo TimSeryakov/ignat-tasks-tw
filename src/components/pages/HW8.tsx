@@ -1,6 +1,6 @@
-import React, {useState} from "react";
-import {CustomButton} from "../common/CustomButton/CustomButton";
-import {homeWorkReducer} from "../bll/homeWorkReducer";
+import React, {useState} from "react"
+import {CustomButton} from "../common/CustomButton/CustomButton"
+import {sortReducer} from "../../store/sortReducer"
 
 const initialPeople = [
     {_id: 0, name: "Кот", age: 3},
@@ -28,9 +28,9 @@ function HW8() {
         </div>
     ))
 
-    const sortUp = () => setPeople(homeWorkReducer(initialPeople, {type: "SORT", payload: "alphabetically"}))
-    const sortDown = () => setPeople(homeWorkReducer(initialPeople, {type: "SORT", payload: "reverseAlphabetically"}))
-    const check18 = () => setPeople(homeWorkReducer(initialPeople, {type: "CHECK", payload: 18}))
+    const sortUp = () => setPeople(sortReducer(initialPeople, {type: "SORT", payload: "alphabetically"}))
+    const sortDown = () => setPeople(sortReducer(initialPeople, {type: "SORT", payload: "reverseAlphabetically"}))
+    const check18 = () => setPeople(sortReducer(initialPeople, {type: "CHECK", payload: 18}))
 
     return (
         <div className="py-5 text-center">

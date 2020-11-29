@@ -1,4 +1,5 @@
 import React, {ChangeEvent, InputHTMLAttributes, DetailedHTMLProps} from "react";
+import { v1 } from "uuid";
 
 type DefaultRadioPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
 
@@ -21,7 +22,7 @@ const CustomRadio: React.FC<CustomRadioPropsType> = (
     }
 
     const mappedOptions: Array<any> = options ? options.map((o, i) => (
-        <span className={"px-3"}>
+        <span className={"px-3"} key={v1()}>
           <label key={`${name} - ${i}`}>
             <input
                 type={"radio"}

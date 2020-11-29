@@ -1,4 +1,4 @@
-import {PeoplesStateType} from "../pages/HW8";
+import {PeoplesStateType} from "../components/pages/HW8";
 
 export type ActionsTypes = SortActionType | CheckActionType
 
@@ -13,7 +13,7 @@ export type CheckActionType = {
 }
 
 
-export const homeWorkReducer = (state: PeoplesStateType, action: ActionsTypes): PeoplesStateType => {
+export const sortReducer = (state: PeoplesStateType, action: ActionsTypes): PeoplesStateType => {
   switch (action.type) {
     case "SORT": {
       if (action.payload === "alphabetically") {
