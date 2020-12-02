@@ -3,7 +3,16 @@ module.exports = {
     extend: {}
   },
   variants: {},
-  plugins: [],
+  plugins: [
+    require("tailwindcss-pixel-dimensions")({
+      width: {
+        total: 200, // 900 is the default
+      },
+      height: {
+        total: 200, // 900 is the default
+      },
+    })
+  ],
   purge: {
     // Filenames to scan for classes
     content: [

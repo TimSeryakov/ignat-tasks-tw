@@ -4,6 +4,7 @@
   "homepage": "https://timseryakov.github.io/ignat-tasks-tw",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.11.1",
     "@testing-library/jest-dom": "^5.11.3",
     "@testing-library/react": "^10.4.8",
     "@testing-library/user-event": "^12.1.1",
@@ -25,7 +26,8 @@
     "react-scripts": "3.4.3",
     "redux": "^4.0.5",
     "tailwindcss": "^1.7.1",
-    "typescript": "~4.0.2",
+    "tailwindcss-pixel-dimensions": "^1.0.2",
+    "typescript": "^3.9.7",
     "uuid": "^8.3.0"
   },
   "scripts": {
