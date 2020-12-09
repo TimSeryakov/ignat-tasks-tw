@@ -1,7 +1,7 @@
 import { ActionsTypes } from "./store";
 
 const initState = {
-  theme: ''
+  theme: 'dark'
 }
 
 type InitStateType = {
