@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/ignat-tasks-tw/static/css/main.b2d603a0.chunk.css",
-    "main.js": "/ignat-tasks-tw/static/js/main.7815fe72.chunk.js",
-    "main.js.map": "/ignat-tasks-tw/static/js/main.7815fe72.chunk.js.map",
+    "main.css": "/ignat-tasks-tw/static/css/main.b4c6fc41.chunk.css",
+    "main.js": "/ignat-tasks-tw/static/js/main.4cde0fdf.chunk.js",
+    "main.js.map": "/ignat-tasks-tw/static/js/main.4cde0fdf.chunk.js.map",
     "runtime-main.js": "/ignat-tasks-tw/static/js/runtime-main.e2bec51a.js",
     "runtime-main.js.map": "/ignat-tasks-tw/static/js/runtime-main.e2bec51a.js.map",
-    "static/js/2.f3b25d1d.chunk.js": "/ignat-tasks-tw/static/js/2.f3b25d1d.chunk.js",
-    "static/js/2.f3b25d1d.chunk.js.map": "/ignat-tasks-tw/static/js/2.f3b25d1d.chunk.js.map",
+    "static/js/2.6748cc7f.chunk.js": "/ignat-tasks-tw/static/js/2.6748cc7f.chunk.js",
+    "static/js/2.6748cc7f.chunk.js.map": "/ignat-tasks-tw/static/js/2.6748cc7f.chunk.js.map",
     "index.html": "/ignat-tasks-tw/index.html",
-    "precache-manifest.015ff96859885aac689114f80ccf1e3c.js": "/ignat-tasks-tw/precache-manifest.015ff96859885aac689114f80ccf1e3c.js",
+    "precache-manifest.36aa08641545cafd7cb64a2416721d34.js": "/ignat-tasks-tw/precache-manifest.36aa08641545cafd7cb64a2416721d34.js",
     "service-worker.js": "/ignat-tasks-tw/service-worker.js",
-    "static/css/main.b2d603a0.chunk.css.map": "/ignat-tasks-tw/static/css/main.b2d603a0.chunk.css.map",
-    "static/js/2.f3b25d1d.chunk.js.LICENSE.txt": "/ignat-tasks-tw/static/js/2.f3b25d1d.chunk.js.LICENSE.txt",
+    "static/css/main.b4c6fc41.chunk.css.map": "/ignat-tasks-tw/static/css/main.b4c6fc41.chunk.css.map",
+    "static/js/2.6748cc7f.chunk.js.LICENSE.txt": "/ignat-tasks-tw/static/js/2.6748cc7f.chunk.js.LICENSE.txt",
     "static/media/fuji.png": "/ignat-tasks-tw/static/media/fuji.0e1c42b1.png",
     "static/media/koifish.png": "/ignat-tasks-tw/static/media/koifish.de4622b8.png",
     "static/media/lionstatue.png": "/ignat-tasks-tw/static/media/lionstatue.6c09dc74.png",
@@ -19,8 +19,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.e2bec51a.js",
-    "static/js/2.f3b25d1d.chunk.js",
-    "static/css/main.b2d603a0.chunk.css",
-    "static/js/main.7815fe72.chunk.js"
+    "static/js/2.6748cc7f.chunk.js",
+    "static/css/main.b4c6fc41.chunk.css",
+    "static/js/main.4cde0fdf.chunk.js"
   ]
 }
